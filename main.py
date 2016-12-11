@@ -47,7 +47,8 @@ class MainPage(webapp2.RequestHandler):
     	user_day = valid_day(self.request.get('day'))
     	user_year = valid_year(self.request.get('year'))
 
-    	if nor (user_month and user_day and user_year):
+    	if not (user_month and user_day and user_year):
+    		self.response.out.write("I don't think that was a valid date.")
     		self.response.out.write(form)
     	else:
     		self.response.out.write("Thanks! That's a totally valid date!")
