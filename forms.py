@@ -32,4 +32,4 @@ def valid_year(year):
 
 #validation
 def escape_html(s):
-  cgi.escape(s, quote = True)
+  return cgi.escape(s, quote = True)
