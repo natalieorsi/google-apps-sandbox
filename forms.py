@@ -1,3 +1,6 @@
+import cgi
+
+#dates
 months = ['January',
           'February',
           'March',
@@ -26,3 +29,7 @@ def valid_year(year):
         year = int(year)
         if year>1899 and year<2021:
             return year
+
+#validation
+def escape_html(s):
+  cgi.escape(s, quote = True)

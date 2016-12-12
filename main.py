@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import webapp2
-from forms import valid_month, valid_day, valid_year
+from forms import valid_month, valid_day, valid_year, escape_html
 
 form="""
 <form method="post">
